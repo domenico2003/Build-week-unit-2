@@ -2,11 +2,10 @@
 .col-page{
     background-color: #000;
     height: 100%;
-    
+    width: 290px;
 }
 .logo{
-    width: 150px;
-    
+    width: 140px;
 }
 
 .overflow{
@@ -28,13 +27,13 @@ div::-webkit-scrollbar {
     width: 15px;
 }
 
-  .overflow::-webkit-scrollbar {
+.overflow::-webkit-scrollbar {
     width: 15px;
-  }
-  .overflow::-webkit-scrollbar-thumb {
+}
+.overflow::-webkit-scrollbar-thumb {
     background: #555;
-  }
-  
+}
+
 
 
 ul,li{
@@ -53,6 +52,7 @@ a{
 
 .home{
     box-sizing:content-box;
+    margin-top: -6px;
 }
 .row-page{
     height: 90vh;
@@ -62,17 +62,8 @@ a{
     height: 100%;
     overflow:auto;
     color: #a5a5a7;
-    background-color: #464646;
+    background-color: #141414;
     font-family: "Roboto", sans-serif;
-    background-image: linear-gradient(
-      to bottom,
-      
-      rgb(43, 43, 43),
-      rgb(33, 33, 33),
-      rgb(12, 12, 12),
-      rgb(0, 0, 0)
-      
-    );
     background-size: contain;
     height: 100%;
     overflow: auto;
@@ -87,9 +78,9 @@ a{
 
 .heart{
     background-image: linear-gradient( to right bottom, #4c16f2, #007eff, #00acfc, #00ced5, #bde8d5 );
-    height: 27px;
-    width: 27px;
-    padding-top: 2px;
+    height: 20px;
+    width: 20px;
+    font-size: 13px;
 }
 
 body{
@@ -102,4 +93,29 @@ body{
     height: 10vh;
     background-color: #252525;
 }
+
+#sidebar{
+    font-size: 12px;
+    line-height: 35px;
+    margin-left: -20px;
+    color: #a5a5a7;
+}
+
+#navbar1{
+    color: #a5a5a7;
+    font-size: 12px;
+    line-height: 5px;
+}
+
+.bookmark{
+    background-color: rgb(40, 90, 40);
+    color: rgb(3, 167, 3);
+    height: 20px;
+    width: 20px;
+    font-size: 13px;
+}
+#span1{
+    margin-left: -20px;
+}
+
 
