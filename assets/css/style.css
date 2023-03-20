@@ -1,27 +1,105 @@
 
 .col-page{
     background-color: #000;
-    
+    height: 100%;
     
 }
+.logo{
+    width: 150px;
+    
+}
+
+.overflow{
+    max-height: 400px; 
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-thumb {
+    background: #555;
+    
+}
+div::-webkit-scrollbar-thumb {
+    background: #555;
+}
+div::-webkit-scrollbar {
+    width: 15px;
+}
+
+  .overflow::-webkit-scrollbar {
+    width: 15px;
+  }
+  .overflow::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+  
+
+
+ul,li{
+    list-style: none;
+}
+
+svg{
+    fill:currentColor;
+    opacity: 0.7;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.home{
+    box-sizing:content-box;
+}
 .row-page{
-    height: 100vh;
+    height: 90vh;
     
 }
 .main{
     height: 100%;
     overflow:auto;
-    
+    color: #a5a5a7;
+    background-color: #464646;
+    font-family: "Roboto", sans-serif;
+    background-image: linear-gradient(
+      to bottom,
+      
+      rgb(43, 43, 43),
+      rgb(33, 33, 33),
+      rgb(12, 12, 12),
+      rgb(0, 0, 0)
+      
+    );
+    background-size: contain;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    background-attachment: fixed;
+
+}
+
+.col-page::-webkit-scrollbar{
+    opacity: 0;
+}
+
+.heart{
+    background-image: linear-gradient( to right bottom, #4c16f2, #007eff, #00acfc, #00ced5, #bde8d5 );
+    height: 27px;
+    width: 27px;
+    padding-top: 2px;
 }
 
 body{
     overflow: hidden;
-    scrollbar-base-color:white
+    
 }
 
 .nav-sud{
     z-index: 999;
-    height: 4vh;
+    height: 10vh;
     background-color: #252525;
 }
 
