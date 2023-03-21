@@ -1,17 +1,33 @@
+body{
+    margin-bottom: 50px;
+}
 
 .col-page{
     background-color: #000;
     height: 100%;
-    width: 290px;
+    /* width: 290px; */
+}
+
+.icone{
+    width: 50px;
+    height: 50px;
+    color:white
 }
 .logo{
     width: 140px;
 }
 
-.overflow{
-    max-height: 400px; 
-    overflow-y: scroll;
+.menùAmici{
+    max-width: 300px;
+    
 }
+.overflow{
+
+    max-height: 400px; 
+    overflow-y: auto;
+}
+
+
 
 body::-webkit-scrollbar {
     width: 0.5rem;
@@ -94,6 +110,7 @@ body{
     background-color: #252525;
 }
 
+
 #sidebar{
     font-size: 12px;
     line-height: 35px;
@@ -101,7 +118,7 @@ body{
     color: #a5a5a7;
 }
 
-#navbar1{
+.navbar1{
     color: #a5a5a7;
     font-size: 12px;
     line-height: 5px;
@@ -114,8 +131,108 @@ body{
     width: 20px;
     font-size: 13px;
 }
-#span1{
+.span1{
     margin-left: -20px;
 }
 
+.player-img{
+    height: 60px;
+    width: 60px;
+}
+.song-name-player{
+    line-height: 17px;
+    margin-block: auto;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
 
+.song-title-player{
+    line-height: 17px;
+    margin-block: auto;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.music-bar{
+    width: 100%;
+    height: 5px;
+    
+}
+
+.player{
+    width: 30vw;
+    
+}
+
+.progress-bar{
+    
+    width: 100%;
+}
+
+
+
+.range-input{
+    
+     height: 8px;
+     max-width: 100px;
+     width: auto
+}
+
+input[type='range'] {
+    overflow: hidden;
+    width: 80px;
+    -webkit-appearance: none;
+    
+  }
+  
+  
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: #434343;
+    box-shadow: -80px 0 0 80px #1FDF64;
+  }
+
+
+/** FF*/
+input[type="range"]::-moz-range-progress {
+background-color: #43e5f7; 
+}
+input[type="range"]::-moz-range-track {  
+background-color: #9a905d;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+background-color: #43e5f7; 
+}
+input[type="range"]::-ms-fill-upper {  
+background-color: #9a905d;
+}
+
+.rounded-arrow{
+    background-color: #00000055;
+    color:white;
+    padding: 8px;
+    border-radius: 40px;
+}
+
+.main-nav{
+    background-color: #141414
+    
+}
+
+.amici-text{
+    font-size: 10px;
+}
+
+.amici-text-span{
+    font-size: 13px;
+}
+
+.immagine-profilo{
+    height: 50px;
+    border-radius: 40px;
+}
