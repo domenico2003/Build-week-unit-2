@@ -91,11 +91,18 @@
 
 #h12{
     color: white;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 #cards1{
     background-color: rgb(53, 52, 52);
     
+}
+#p2{
+    margin-top: 12px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
 }
