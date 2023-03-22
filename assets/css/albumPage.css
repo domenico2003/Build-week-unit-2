@@ -15,21 +15,11 @@ img.pinguini {
 
 div.giallo {
   font-family: "circular";
-  background: linear-gradient(
-    to bottom,
-    rgba(249, 209, 25, 0.829),
-    rgb(127, 108, 45),
-    rgb(115, 97, 40)
-  );
+
   padding-block: 1rem;
 }
 div.loghi {
-  background: linear-gradient(
-    to bottom,
-    rgb(115 97 40 / 87%),
-    rgb(72 63 29 / 79%),
-    rgb(52 45 24/0%)
-  );
+  background-color: rgba(0, 0, 0, 0.253);
 }
 
 i.play {
@@ -60,4 +50,15 @@ div.titoli {
 }
 div.riproduzioni {
   font-family: "circular";
+}
+.main {
+  background: rgb(230, 238, 24);
+  background: linear-gradient(
+    180deg,
+    rgba(212, 182, 75, 1) 16%,
+    rgba(181, 157, 65, 0.623) 34%,
+    rgba(127, 110, 45, 0.705) 51%,
+    rgba(46, 45, 22, 0.8575805322128851) 64%,
+    rgba(5, 5, 0, 1) 84%
+  );
 }
