@@ -15,7 +15,7 @@
     height: 45vh;
     object-fit: cover;
     object-position: 100% 85%;
-    z-index: -0;
+    z-index: 0;
 }
 
 #name-artist{
@@ -28,4 +28,27 @@
 #title-album{
     font-size: 6rem;
     font-weight: bold;
+}
+
+.play {
+    font-size: 4rem;
+    color: #1ed760
+}
+
+#follow-btn{
+    padding-block: 5px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+#trePunti{
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.title-artist{
+    font-weight: bold;
+    
 }
