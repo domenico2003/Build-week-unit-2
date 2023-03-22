@@ -39,3 +39,6 @@ i.arrow {
 i.dot {
   font-size: 2rem;
 }
+div.clock {
+  margin-left: auto;
+}
