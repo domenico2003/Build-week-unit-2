@@ -52,3 +52,7 @@
     font-weight: bold;
     
 }
+
+#my-ol-artist{
+    list-style:decimal;
+}
