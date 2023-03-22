@@ -23,11 +23,17 @@
     color:white;
     font-weight: bold;
     z-index: 999;
+    max-width: 100%;
 }
 
 #title-album{
     font-size: 6rem;
     font-weight: bold;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
 
 .play {
@@ -53,6 +59,19 @@
     
 }
 
-#my-ol-artist{
-    list-style:decimal;
+.img-album{
+    height: 38px;
+}
+
+.pallino-cuore{
+    bottom: 0;
+    right: 0;
+    background-color: #1ed760;
+    color: white;
+    height:30px ;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
 }
