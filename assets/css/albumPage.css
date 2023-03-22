@@ -20,6 +20,8 @@ div.giallo {
     rgb(127, 108, 45),
     rgb(115, 97, 40)
   );
+  padding-block: 1rem;
+  
 }
 div.loghi {
   background: linear-gradient(
@@ -46,9 +48,8 @@ i.dot {
 div.clock {
   margin-left: auto;
 }
-div.brucata {
-  padding-block: 1rem;
-  margin-top: 45px;
-}
-img.tizio {
+
+
+.row-personale{
+  padding-top: 45px;
 }
