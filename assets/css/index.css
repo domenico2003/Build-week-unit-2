@@ -11,6 +11,10 @@
     margin-left: 5px;
 }
 
+.main-nav{
+    z-index: 999;
+}
+
 #h1{
     margin-left: 00px;
     font-size: 1rem;
@@ -32,6 +36,13 @@
     font-size: 45px;
     margin-top: -15px;
     font-weight: bold;
+    
+}
+
+.card-small{
+    background-color: #6868687d;
+    color: white;
+    
 }
 #h1banner2{
     color: rgb(197, 195, 195);
