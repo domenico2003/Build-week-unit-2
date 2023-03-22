@@ -1,5 +1,9 @@
 h2.gioventu {
   font-size: 6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
 }
 img.pinguini {
   border-radius: 50%;
@@ -41,4 +45,10 @@ i.dot {
 }
 div.clock {
   margin-left: auto;
+}
+div.brucata {
+  padding-block: 1rem;
+  margin-top: 45px;
+}
+img.tizio {
 }
