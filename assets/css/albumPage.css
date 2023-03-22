@@ -1,5 +1,9 @@
 h2.gioventu {
   font-size: 6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
 }
 img.pinguini {
   border-radius: 50%;
@@ -10,12 +14,14 @@ img.pinguini {
 }
 
 div.giallo {
+  font-family: "circular";
   background: linear-gradient(
     to bottom,
     rgba(249, 209, 25, 0.829),
     rgb(127, 108, 45),
     rgb(115, 97, 40)
   );
+  padding-block: 1rem;
 }
 div.loghi {
   background: linear-gradient(
@@ -38,4 +44,20 @@ i.arrow {
 }
 i.dot {
   font-size: 2rem;
+}
+div.clock {
+  margin-left: auto;
+}
+
+.row-personale {
+  padding-top: 45px;
+}
+body {
+  font-family: "circular";
+}
+div.titoli {
+  font-family: "circular";
+}
+div.riproduzioni {
+  font-family: "circular";
 }
