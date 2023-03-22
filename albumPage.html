@@ -119,15 +119,15 @@
           </div>
             <!-- MAIN -->
             
-            <div class="container-fluid d-flex text-white giallo ">
+            <div class="container-fluid d-flex justify-content-center text-white giallo ">
               <div class="row row-personale ms-2" >
-                <div class="col-3 d-flex align-items-center">
+                <div class="col-12 col-md-3 d-flex align-items-center">
 
               <img src="./assets/imgs/main/image-17.jpg" class="tizio img-fluid shadow-lg" alt="gioventù brucata">
               </div>
               <div class=" mt-auto  mb-auto col-4 col-sm-6 col-md-7 col-lg-7 col-xl-9 ">
-              
-              <div class="brucata  ">
+              <!-- album nome md !modificare in js-->
+              <div class="brucata d-none d-md-block ">
               <small class="ms-3 ">album</small>              
               <h2 class=" gioventu ms-3 fw-bold">Gioventù brucata</h2>
               <div class="d-flex ">
@@ -138,9 +138,22 @@
             
           </div>
             </div>
+            
             </div>
-          
-            <div class="loghi container-fluid d-flex pt-3 pb-3  ">
+          <!-- album nome sm !modificare in js -->
+          <div class="loghi">
+            <div class="pt-4 ps-4 container-fluid brucata text-white d-block d-md-none ">
+                            
+              <h2 class=" fs-1 ms-4 fw-bold">Gioventù brucata</h2>
+              <div class="d-flex my-3">
+              <img src="./assets/imgs/main/image-12.jpg" class="pinguini ms-4" alt="img" width="25px" height="25px">
+              <p class="ms-4 "> pinguini tattici nucleari</p>
+              
+            </div>
+            <p class="ms-4  ">album</p>
+            </div>
+            <!-- play md -->
+            <div class="d-none d-md-flex container-fluid  pt-3 pb-3  ">
               <div class=" d-flex align-items-center gap-4 ps-4">
                 <i class="play bi bi-play-circle-fill"></i>
                 <i class="hearth bi bi-heart"></i>
@@ -150,7 +163,26 @@
               </div>
               
             </div>
-            <div class="titoli container-fluid d-flex justify-content-between">
+            <!-- play sm -->
+            <div class=" d-md-none container-fluid  pt-3 pb-3  ms-2 ">
+              <div class=" d-flex align-items-center justify-content-between gap-4 ps-4">
+                
+                <div class="d-flex align-items-center gap-4">
+                <i class="hearth bi bi-heart"></i>
+                <i class="arrow bi bi-arrow-down-circle"></i>
+                <i class="dot bi bi-three-dots"></i>
+                </div>
+
+                <dir class="d-flex align-items-center ps-0 pe-2 gap-4">
+                  <i class="bi bi-shuffle fs-1"></i>
+                  <i class="play bi bi-play-circle-fill"></i>
+                </dir>
+
+              </div>
+              
+            </div>
+            <!-- album page -->
+            <div class="  d-none titoli container-fluid d-sm-flex justify-content-between">
             <div class="container-fluid ">
               <div class="row">
                 <div class="col-7 d-flex gap-2 ms-4">
@@ -163,127 +195,136 @@
          </div>
           </div>
           <hr class="m-0">
-          <div class="titoli container-fluid d-flex justify-content-between mt-5 align-items-center gap-3 ms-5 ps-0 ">
-            <p>1</p>                               
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
-                  <div class="d-flex flex-column ">
-                  <p class="mb-0">TITOLO</p>
-                  <p>sottotitolo</p>
-                </div>
-                </div>
-                <div class="col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
-                <div class="col-2 text-center pe-5">00:00</div>
-              </div>
-         </div>
-          </div>
-          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
-            <p>2</p>                               
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
-                  <div class="d-flex flex-column ">
-                  <p class="mb-0">TITOLO</p>
-                  <p>sottotitolo</p>
-                </div>
-                </div>
-                <div class="col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
-                <div class="col-2 text-center">00:00</div>
-              </div>
-         </div>
-          </div>
-          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
-            <p>3</p>                               
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
-                  <div class="d-flex flex-column ">
-                  <p class="mb-0">TITOLO</p>
-                  <p>sottotitolo</p>
-                </div>
-                </div>
-                <div class="col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
-                <div class="col-2 text-center">00:00</div>
-              </div>
-         </div>
-          </div>
-          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
-            <p>4</p>                               
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
-                  <div class="d-flex flex-column ">
-                  <p class="mb-0">TITOLO</p>
-                  <p>sottotitolo</p>
-                </div>
-                </div>
-                <div class="col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
-                <div class="col-2 text-center">00:00</div>
-              </div>
-         </div>
-          </div>
-          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
-            <p>5</p>                               
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
-                  <div class="d-flex flex-column ">
-                  <p class="mb-0">TITOLO</p>
-                  <p>sottotitolo</p>
-                </div>
-                </div>
-                <div class="col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
-                <div class="col-2 text-center">00:00</div>
-              </div>
-         </div>
-          </div>
-          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
-            <p>6</p>                               
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
-                  <div class="d-flex flex-column ">
-                  <p class="mb-0">TITOLO</p>
-                  <p>sottotitolo</p>
-                </div>
-                </div>
-                <div class="col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
-                <div class="col-2 text-center">00:00</div>
-              </div>
-         </div>
-          </div>
-          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
-            <p>7</p>                               
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
-                  <div class="d-flex flex-column ">
-                  <p class="mb-0">TITOLO</p>
-                  <p>sottotitolo</p>
-                </div>
-                </div>
-                <div class="col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
-                <div class="col-2 text-center">00:00</div>
-              </div>
-         </div>
-          </div>
-          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
-            <p>8</p>                               
-            <div class="container-fluid ">
-              <div class="row">
-                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
-                  <div class="d-flex flex-column ">
-                  <p class="mb-0">TITOLO</p>
-                  <p>sottotitolo</p>
-                </div>
-                </div>
-                <div class="col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
-                <div class="col-2 text-center">00:00</div>
-              </div>
-         </div>
-          </div>
           
+          <div class="titoli container-fluid d-flex justify-content-between mt-5 align-items-center gap-3 ms-5 ps-0 ">
+            <p class="d-none d-sm-block">1</p>                               
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
+                  <div class="d-flex flex-column ">
+                  <p class="mb-0">TITOLO</p>
+                  <p>sottotitolo</p>
+                </div>
+                </div>
+                <div class=" d-none d-sm-flex col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
+                <div class="d-none d-sm-flex col-2  pe-2">00:00</div>
+                <p class=" col-4 text-end d-sm-none mt-0 mb-0 me-3 fs-4"><i class="bi bi-three-dots-vertical"></i></p>
+              </div>
+         </div>
+          </div>
+          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
+            <p class="d-none d-sm-block">2</p>                               
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
+                  <div class="d-flex flex-column ">
+                  <p class="mb-0">TITOLO</p>
+                  <p>sottotitolo</p>
+                </div>
+                </div>
+                <div class=" d-none d-sm-flex col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
+                <div class="d-none d-sm-flex col-2  pe-2">00:00</div>
+                <p class=" col-4 text-end d-sm-none mt-0 mb-0 me-3 fs-4"><i class="bi bi-three-dots-vertical"></i></p>
+              </div>
+         </div>
+          </div>
+          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
+            <p class="d-none d-sm-block">3</p>                               
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
+                  <div class="d-flex flex-column ">
+                  <p class="mb-0">TITOLO</p>
+                  <p>sottotitolo</p>
+                </div>
+                </div>
+                <div class=" d-none d-sm-flex col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
+                <div class="d-none d-sm-flex col-2  pe-2">00:00</div>
+                <p class=" col-4 text-end d-sm-none mt-0 mb-0 me-3 fs-4"><i class="bi bi-three-dots-vertical"></i></p>
+              </div>
+         </div>
+          </div>
+          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
+            <p class="d-none d-sm-block">4</p>                               
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
+                  <div class="d-flex flex-column ">
+                  <p class="mb-0">TITOLO</p>
+                  <p>sottotitolo</p>
+                </div>
+                </div>
+                <div class=" d-none d-sm-flex col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
+                <div class="d-none d-sm-flex col-2  pe-2">00:00</div>
+                <p class=" col-4 text-end d-sm-none mt-0 mb-0 me-3 fs-4"><i class="bi bi-three-dots-vertical"></i></p>
+              </div>
+         </div>
+          </div>
+          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
+            <p class="d-none d-sm-block">5</p>                               
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
+                  <div class="d-flex flex-column ">
+                  <p class="mb-0">TITOLO</p>
+                  <p>sottotitolo</p>
+                </div>
+                </div>
+                <div class=" d-none d-sm-flex col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
+                <div class="d-none d-sm-flex col-2  pe-2">00:00</div>
+                <p class=" col-4 text-end d-sm-none mt-0 mb-0 me-3 fs-4"><i class="bi bi-three-dots-vertical"></i></p>
+              </div>
+         </div>
+          </div>
+          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
+            <p class="d-none d-sm-block">6</p>                               
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
+                  <div class="d-flex flex-column ">
+                  <p class="mb-0">TITOLO</p>
+                  <p>sottotitolo</p>
+                </div>
+                </div>
+                <div class=" d-none d-sm-flex col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
+                <div class="d-none d-sm-flex col-2  pe-2">00:00</div>
+                <p class=" col-4 text-end d-sm-none mt-0 mb-0 me-3 fs-4"><i class="bi bi-three-dots-vertical"></i></p>
+              </div>
+         </div>
+          </div>
+          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
+            <p class="d-none d-sm-block">7</p>                               
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
+                  <div class="d-flex flex-column ">
+                  <p class="mb-0">TITOLO</p>
+                  <p>sottotitolo</p>
+                </div>
+                </div>
+                <div class=" d-none d-sm-flex col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
+                <div class="d-none d-sm-flex col-2  pe-2">00:00</div>
+                <p class=" col-4 text-end d-sm-none mt-0 mb-0 me-3 fs-4"><i class="bi bi-three-dots-vertical"></i></p>
+              </div>
+         </div>
+          </div>
+          <div class="titoli container-fluid d-flex justify-content-between mt-2 align-items-center gap-3 ms-5 ps-0 ">
+            <p class="d-none d-sm-block">8</p>                               
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col-7 d-flex flex-column ps-0 pe-0"> 
+                  <div class="d-flex flex-column ">
+                  <p class="mb-0">TITOLO</p>
+                  <p>sottotitolo</p>
+                </div>
+                </div>
+                <div class=" d-none d-sm-flex col-3 text-center ps-0 "><p>RIPRODUZIONe</p></div>
+                <div class="d-none d-sm-flex col-2  pe-2">00:00</div>
+                <p class=" col-4 text-end d-sm-none mt-0 mb-0 me-3 fs-4"><i class="bi bi-three-dots-vertical"></i></p>
+              </div>
+         </div>
+          </div>
+          </div>
     </div>
     <div class="col d-none text-white col-page menùAmici  " >
            

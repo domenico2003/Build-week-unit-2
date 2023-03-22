@@ -19,7 +19,8 @@ div.giallo {
   padding-block: 1rem;
 }
 div.loghi {
-  background-color: rgba(0, 0, 0, 0.253);
+  background-color: rgba(0, 0, 0, 0.342);
+  color: white;
 }
 
 i.play {
