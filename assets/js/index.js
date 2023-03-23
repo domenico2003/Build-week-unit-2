@@ -9,3 +9,32 @@ btnClose.onclick=()=>{
     offCanvas.classList.add("d-none")
 }
 
+
+
+
+
+// dinamicità
+
+window.onload=()=>{
+    
+}
+let artisti=document.getElementsByClassName("artista")
+
+
+
+for (const artist of artisti) {
+    let nomeArtista = artist.childNodes[3].textContent
+        let id;
+    fetch( `https://striveschool-api.herokuapp.com/api/deezer/search?q=${nomeArtista}`)
+        .then(resp=>resp.json())
+        .then(dato=>{
+            id=dato[0].artist.id
+            
+        })
+    artist.onclick=()=>{
+        
+        window.location.assign("../artistPage.html?id="+id )
+    }
+    
+}
+

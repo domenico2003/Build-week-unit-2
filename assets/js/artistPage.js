@@ -9,3 +9,16 @@ btnClose.onclick=()=>{
     offCanvas.classList.add("d-none")
 }
 
+let input =document.querySelector("#search-input")
+let btnDnone=document.querySelector("#btn-d-none")
+
+btnDnone.onclick=()=>{
+
+    if (input.classList.contains("d-none")) {
+        input.classList.remove("d-none");
+      } else {
+        input.classList.add("d-none");
+      }
+}
+
+
