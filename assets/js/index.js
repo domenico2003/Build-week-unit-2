@@ -18,11 +18,11 @@ for (const artist of artisti) {
   let nome = artist.childNodes[3].textContent;
 
   artist.addEventListener("click", () => {
-    idSeach(nome);
+    idSeachArtista(nome);
   });
 }
 
-async function idSeach(nomeArtista) {
+async function idSeachArtista(nomeArtista) {
   let risposta = await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/search?q=${nomeArtista}`
   );
@@ -40,13 +40,13 @@ let albums = document.getElementsByClassName("album-card");
 
 for (const album of albums) {
   let nome = album.childNodes[3].childNodes[1].textContent;
-
+  console.log(nome);
   album.addEventListener("click", () => {
-    idSeach(nome);
+    idSeachAlbum(nome);
   });
 }
 
-async function idSeach(nomeAlbum) {
+async function idSeachAlbum(nomeAlbum) {
   let risposta = await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/search?q=${nomeAlbum}`
   );
@@ -54,7 +54,7 @@ async function idSeach(nomeAlbum) {
 
   let id;
   id = dato.data[0].album.id;
-
+  console.log(id);
   window.location.assign("../albumPage.html?id=" + id);
 }
 
@@ -63,22 +63,23 @@ async function idSeach(nomeAlbum) {
 let albumsXs = document.getElementsByClassName("album-card-xs");
 
 for (const albumXs of albumsXs) {
-  let nome =
+  let nomeXs =
     albumXs.childNodes[1].childNodes[3].childNodes[1].childNodes[3].textContent;
-
+  // console.log(nomeXs);
   albumXs.addEventListener("click", () => {
-    idSeach(nome);
+    idSeachAlbumXs(nomeXs);
   });
 }
 
-async function idSeach(nomeAlbum) {
+async function idSeachAlbumXs(nomeAlbumXs) {
   let risposta = await fetch(
-    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${nomeAlbum}`
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${nomeAlbumXs}`
   );
   let dato = await risposta.json();
 
   let id;
   id = dato.data[0].album.id;
 
+  console.log(id);
   window.location.assign("../albumPage.html?id=" + id);
 }

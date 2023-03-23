@@ -23,7 +23,9 @@
                 <div class="d-flex align-items-center"><a class=" p-0 pt-0 me-2 home" aria-current="page" href="#"><svg role="img" height="20" width="20" aria-hidden="true" class=" Svg-sc-ytk21e-0 uPxdw home-active-icon " viewBox="0 0 24 24" data-encore-id="icon"><path d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path></svg> </a><a href="#" class="ms-2 navbar1"  >Home</a> </div>
               </li>
               <li class="nav-item">
-                <div class="d-flex align-items-center"><button class=" btn text-white p-0 home me-2" href="#"><svg role="img" height="20" width="20" aria-hidden="true" class=" my-3 Svg-sc-ytk21e-0 uPxdw search-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path></svg></button><a href="#"  class="ms-2 navbar1">Cerca</a> </div>
+                <div class="d-flex align-items-center">
+                  <button  class=" btn text-white p-0 home me-2" id="btn-d-none"><a href="#search-input">
+                    <svg role="img" height="20" width="20" aria-hidden="true" class=" my-3 Svg-sc-ytk21e-0 uPxdw search-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path></svg><span  class="ms-3 navbar1">Cerca</span></a></button> </div>
               </li>
               <li class="nav-item">
                 <div class="d-flex align-items-center"><a class=" p-0  me-2 home" href="#"><svg role="img" height="20" width="20" aria-hidden="true" class="d-block Svg-sc-ytk21e-0 uPxdw collection-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M14.5 2.134a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866V21a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V3a1 1 0 0 1 .5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zm6 0a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1z"></path></svg></a><a href="#" class="ms-2 navbar1">La tua libreria</a>
@@ -99,6 +101,11 @@
                 </div>
                 </div>
             
+                <div id="search-input" class="d-none">
+                  <input lass="form-control" type="text" placeholder="cerca" class="py-1 rounded-start-4 rounded-start m-0 "  aria-label="default input example" >
+                  <button type="button" class="btn btn-light py-1  rounded-end-4 m-0" ><i class="bi bi-search"></i></button>
+                </div>
+
                 <div class="d-flex align-items-center rightnav">
                   <div class="dropdown d-none d-md-block">
                     <button
@@ -130,16 +137,16 @@
               <div class="row row-personale ms-2 " >
                 <div class="col-12 col-md-3 col-xxl-2 d-flex justify-content-center justify-content-md-start">
 
-              <img src="./assets/imgs/main/image-17.jpg" class="tizio img-fluid shadow-lg" alt="gioventù brucata">
+              <img src="./assets/imgs/main/image-17.jpg" id="img-album" class="tizio img-fluid shadow-lg " alt="gioventù brucata">
               </div>
               <div class=" mt-auto  mb-auto col-4 col-sm-6 col-md col-lg-7 col-xl-9 ">
               <!-- album nome md !modificare in js-->
               <div class="brucata d-none d-md-block ">
               <small class=" ">album</small>              
-              <h2 class=" gioventu  fw-bold">Gioventù brucata</h2>
+              <h2 class=" gioventu  fw-bold " id="nome-album-md">Gioventù brucata</h2>
               <div class="d-flex ">
-              <img src="./assets/imgs/main/image-12.jpg" class="pinguini " alt="img" width="25px" height="25px">
-              <small class="ms-3 "> pinguini tattici nucleari</small>
+              <img src="./assets/imgs/main/image-12.jpg" class="pinguini " id="picture" alt="img" width="25px" height="25px">
+              <small class="ms-3 " id="nome-bend"> pinguini tattici nucleari</small>
             </div>
             </div>
             
@@ -151,10 +158,10 @@
           <div class="loghi">
             <div class="pt-4 ps-4 container-fluid brucata text-white d-block d-md-none ">
                             
-              <h2 class=" fs-1 ms-4 fw-bold">Gioventù brucata</h2>
+              <h2 class=" fs-1 ms-4 fw-bold" id="nome-album-sm">Gioventù brucata</h2>
               <div class="d-flex my-3">
-              <img src="./assets/imgs/main/image-12.jpg" class="pinguini ms-4" alt="img" width="25px" height="25px">
-              <p class="ms-4 "> pinguini tattici nucleari</p>
+              <img src="./assets/imgs/main/image-12.jpg" id="pictureSm" class="pinguini ms-4" alt="img" width="25px" height="25px">
+              <p class="ms-4 " id="nome-bendSm"> pinguini tattici nucleari</p>
               
             </div>
             <p class="ms-4  ">album</p>
@@ -202,15 +209,15 @@
          </div>
           </div>
           <hr class="m-0 mb-5">
-          <div class="">
+          <div id="target">
             <div class="  titoli  d-flex justify-content-between mt-3">
               <div class="container-fluid ms-4">
                 <div class="row ">
                   <div class="col-8 col-md-7 col-xl-6 d-flex gap-4 align-items-center ">
                     <p class="m-0 d-none d-sm-block">1</p>
                     <div class="">
-                    <p class="m-0">DOMENICO</p>
-                    <p class="m-0">sottotitolo</p>
+                    <p class="m-0">JOAO</p>
+                    <p class="m-0">MERAVIGLIAO</p>
                   </div>
                   </div>
                   <div class=" d-none d-sm-flex col-3 col-md-3 col-xl-4 justify-content-center"><p>RIPRODUZIONI</p></div>
