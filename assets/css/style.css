@@ -42,7 +42,7 @@ div::-webkit-scrollbar {
   width: 15px;
 }
 .overflow::-webkit-scrollbar-thumb {
-  background: #555;
+  background: #ffffff8c;
 }
 
 ul {
