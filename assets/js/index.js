@@ -33,8 +33,11 @@ async function idSeachArtista(nomeArtista) {
 
   let id;
   id = dato.data[0].artist.id;
-  spinner.classList.add("d-none");
-  window.location.assign("../artistPage.html?id=" + id);
+
+  setTimeout(function () {
+    window.location.assign("../artistPage.html?id=" + id);
+    spinner.classList.add("d-none");
+  }, 500);
 }
 
 // album
@@ -59,8 +62,10 @@ async function idSeachAlbum(nomeAlbum) {
   let id;
   id = dato.data[0].album.id;
   console.log(id);
-  spinner.classList.add("d-none");
-  window.location.assign("../albumPage.html?id=" + id);
+  setTimeout(function () {
+    window.location.assign("../albumPage.html?id=" + id);
+    spinner.classList.add("d-none");
+  }, 500);
 }
 
 let profilo = document.querySelector("#profilo");
