@@ -47,6 +47,12 @@ let stampa = (album) => {
 
   name.innerText = album.artist.name;
   nameSm.innerText = album.artist.name;
+  name.addEventListener("click", () => {
+    idSeachArtista(album.artist.name);
+  });
+  nameSm.addEventListener("click", () => {
+    idSeachArtista(album.artist.name);
+  });
 
   album.tracks.data.forEach((canzone) => {
     indice++;
@@ -88,6 +94,11 @@ let stampa = (album) => {
     let p2 = document.createElement("p");
     p2.classList.add("m-0");
     p2.textContent = canzone.artist.name;
+    p2.addEventListener("click", () => {
+      setTimeout;
+      spinner.classList.remove("d-none");
+      idSeachArtista(canzone.artist.name);
+    });
 
     let versioniDiv = document.createElement("div");
     versioniDiv.classList.add(
@@ -147,3 +158,15 @@ let profilo = document.querySelector("#profilo");
 let nomeCognome = JSON.parse(window.localStorage.getItem("datiPersonali"));
 
 profilo.textContent = `${nomeCognome.name} ${nomeCognome.surname}`;
+
+async function idSeachArtista(nomeArtista) {
+  let risposta = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${nomeArtista}`
+  );
+  let dato = await risposta.json();
+
+  let id;
+  id = dato.data[0].artist.id;
+  // spinner.classList.add("d-none");
+  window.location.assign("../artistPage.html?id=" + id);
+}
