@@ -28,6 +28,8 @@ let pictureSm = document.getElementById("pictureSm");
 let name = document.getElementById("nome-bend");
 let nameSm = document.getElementById("nome-bendSm");
 let target = document.getElementById("target");
+let spinner = document.querySelector(".spinner");
+
 let indice = 0;
 
 let idAlbum = new URLSearchParams(window.location.search).get("id");
@@ -46,11 +48,16 @@ let stampa = (album) => {
   pictureSm.src = album.artist.picture;
 
   name.innerText = album.artist.name;
+  name.classList.add("hover");
   nameSm.innerText = album.artist.name;
+  nameSm.classList.add("hover");
+
   name.addEventListener("click", () => {
+    spinner.classList.remove("d-none");
     idSeachArtista(album.artist.name);
   });
   nameSm.addEventListener("click", () => {
+    spinner.classList.remove("d-none");
     idSeachArtista(album.artist.name);
   });
 
@@ -88,14 +95,22 @@ let stampa = (album) => {
     let emptyDiv = document.createElement("div");
 
     let p1 = document.createElement("p");
-    p1.classList.add("m-0");
+    p1.classList.add("m-0", "hover");
     p1.textContent = canzone.title;
+    p1.addEventListener("click", () => {
+      let titolo = document.querySelector(".song-title-player");
+      titolo.textContent = canzone.title_short;
+      let autore = document.querySelector(".song-name-player");
+      autore.textContent = canzone.artist.name;
+      let imgPlayer = document.querySelector(".player-img");
+      imgPlayer.src = `https://e-cdns-images.dzcdn.net/images/cover/${canzone.md5_image}/56x56-000000-80-0-0.jpg`;
+      audio.src = canzone.preview;
+    });
 
     let p2 = document.createElement("p");
-    p2.classList.add("m-0");
+    p2.classList.add("m-0", "hover");
     p2.textContent = canzone.artist.name;
     p2.addEventListener("click", () => {
-      setTimeout;
       spinner.classList.remove("d-none");
       idSeachArtista(canzone.artist.name);
     });
@@ -167,6 +182,57 @@ async function idSeachArtista(nomeArtista) {
 
   let id;
   id = dato.data[0].artist.id;
-  // spinner.classList.add("d-none");
-  window.location.assign("../artistPage.html?id=" + id);
+  setTimeout(function () {
+    window.location.assign("../artistPage.html?id=" + id);
+    spinner.classList.add("d-none");
+  }, 500);
+}
+
+// Player
+
+// Player
+var playhead = document.getElementById("playhead");
+var audio = document.getElementById("audio");
+var playPauseButton = document.querySelector(".pausa");
+
+playPauseButton.addEventListener("click", function () {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+});
+
+audio.addEventListener("timeupdate", function () {
+  var playPercent = 100 * (audio.currentTime / audio.duration);
+  playhead.style.left = playPercent + "%";
+});
+
+playhead.addEventListener("mousedown", function () {
+  audio.pause();
+  window.addEventListener("mousemove", movePlayhead);
+  window.addEventListener("mouseup", mouseUp);
+});
+
+function movePlayhead(e) {
+  var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+  var newMargLeft = e.pageX - timeline.offsetLeft;
+
+  if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+    playhead.style.left = newMargLeft + "px";
+  }
+  if (newMargLeft < 0) {
+    playhead.style.left = "0px";
+  }
+  if (newMargLeft > timelineWidth) {
+    playhead.style.left = timelineWidth + "px";
+  }
+}
+
+function mouseUp() {
+  window.removeEventListener("mousemove", movePlayhead);
+  audio.currentTime =
+    audio.duration * (playhead.offsetLeft / timeline.offsetWidth);
+  window.removeEventListener("mouseup", mouseUp);
+  audio.play();
 }

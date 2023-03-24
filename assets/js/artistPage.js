@@ -67,8 +67,17 @@ let stampaArtista = function (dato) {
     const div = document.createElement("div");
 
     const p2 = document.createElement("p");
-    p2.classList.add("m-0", "text-white");
+    p2.classList.add("m-0", "text-white", "hover");
     p2.innerText = canzone.title;
+    p2.addEventListener("click", () => {
+      let titolo = document.querySelector(".song-title-player");
+      titolo.textContent = canzone.title_short;
+      let autore = document.querySelector(".song-name-player");
+      autore.textContent = canzone.artist.name;
+      let imgPlayer = document.querySelector(".player-img");
+      imgPlayer.src = `https://e-cdns-images.dzcdn.net/images/cover/${canzone.md5_image}/56x56-000000-80-0-0.jpg`;
+      audio.src = canzone.preview;
+    });
 
     const small = document.createElement("small");
     small.classList.add("d-block", "d-sm-none");
@@ -149,3 +158,50 @@ let profilo = document.querySelector("#profilo");
 let nomeCognome = JSON.parse(window.localStorage.getItem("datiPersonali"));
 
 profilo.textContent = `${nomeCognome.name} ${nomeCognome.surname}`;
+
+// Player
+var playhead = document.getElementById("playhead");
+var audio = document.getElementById("audio");
+var playPauseButton = document.querySelector(".pausa");
+
+playPauseButton.addEventListener("click", function () {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+});
+
+audio.addEventListener("timeupdate", function () {
+  var playPercent = 100 * (audio.currentTime / audio.duration);
+  playhead.style.left = playPercent + "%";
+});
+
+playhead.addEventListener("mousedown", function () {
+  audio.pause();
+  window.addEventListener("mousemove", movePlayhead);
+  window.addEventListener("mouseup", mouseUp);
+});
+
+function movePlayhead(e) {
+  var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+  var newMargLeft = e.pageX - timeline.offsetLeft;
+
+  if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+    playhead.style.left = newMargLeft + "px";
+  }
+  if (newMargLeft < 0) {
+    playhead.style.left = "0px";
+  }
+  if (newMargLeft > timelineWidth) {
+    playhead.style.left = timelineWidth + "px";
+  }
+}
+
+function mouseUp() {
+  window.removeEventListener("mousemove", movePlayhead);
+  audio.currentTime =
+    audio.duration * (playhead.offsetLeft / timeline.offsetWidth);
+  window.removeEventListener("mouseup", mouseUp);
+  audio.play();
+}
