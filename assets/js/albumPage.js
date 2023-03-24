@@ -87,7 +87,7 @@ let stampa = (album) => {
 
     let p2 = document.createElement("p");
     p2.classList.add("m-0");
-    p2.textContent = canzone.title_version;
+    p2.textContent = canzone.artist.name;
 
     let versioniDiv = document.createElement("div");
     versioniDiv.classList.add(
@@ -112,7 +112,7 @@ let stampa = (album) => {
       "justify-content-center",
       "clock"
     );
-    divClock.textContent = canzone.duration;
+    divClock.textContent = formatTime(canzone.duration);
 
     let dots = document.createElement("p");
     dots.classList.add("col-4", "text-end", "clock", "d-sm-none", "fs-4");
@@ -136,26 +136,14 @@ let stampa = (album) => {
   });
 };
 
-{
-  /* <div class="  titoli  d-flex justify-content-between mt-3">
-<div class="container-fluid ms-4">
-<div class="row ">
-              <div class="col-8 col-md-7 col-xl-6 d-flex gap-4 align-items-center ">
-                <p class="m-0 d-none d-sm-block">1</p>
-                  <div class="">
-                    <p class="m-0">DOMENICO</p>
-                    <p class="m-0">sottotitolo</p>
-                    </div>
-                    </div>
-                  <div class=" d-none d-sm-flex col-3 col-md-3 col-xl-4 justify-content-center"><p>RIPRODUZIONI</p></div>
-                  
-                  
-                  <div class="d-none d-sm-flex col-1 col-md-2 col-xl-2 justify-content-center clock">00:00</div>
-                  <p class="col-4  text-end clock  d-sm-none fs-4"><i class="bi bi-three-dots-vertical"></i></p>
-                 
-
-                  
-                </div>
-           </div>
-            </div> */
+function formatTime(seconds) {
+  var minutes = Math.floor(seconds / 60);
+  var remainingSeconds = seconds % 60;
+  return minutes + ":" + (remainingSeconds < 10 ? "0" : "") + remainingSeconds;
 }
+
+let profilo = document.querySelector("#profilo");
+
+let nomeCognome = JSON.parse(window.localStorage.getItem("datiPersonali"));
+
+profilo.textContent = `${nomeCognome.name} ${nomeCognome.surname}`;
